@@ -20,7 +20,7 @@ Rivera-Rivera CJ and Montoya-Burgos JI (2016). LS³: A Method for Improving Phyl
   DONE! (LSX runs directly through the Rscript or Rscript.exe scripting front-end, see
 point 1.3)
 
-  Check dependencies in point 3.
+  Check dependencies in point 2.
   
   
 1.2 Input files
