@@ -12,16 +12,19 @@ Rivera-Rivera CJ and Montoya-Burgos JI (2016). LS³: A Method for Improving Phyl
 1.1 Download and installation
 
 
-  Download the R script LSx_v1.1.R and the LSX input file LSx_input_file.txt from
-https://genev.unige.ch/research/laboratory/Juan-Montoya (under the “MORE” tab).
+  Download the R script:  <b>LSx_v1.1.R</b>
+  
+  and the LSX input file: <b>LSx_input_file.txt</b>
 
 
   DONE! (LSX runs directly through the Rscript or Rscript.exe scripting front-end, see
 point 1.3)
+
   Check dependencies in point 3.
   
   
 1.2 Input files
+
 
   • Gene sequence alignments, each as an independent file in PHYLIP interleave
 format. Taxa names of less than 10 characters are identical across gene datasets,
@@ -53,3 +56,19 @@ example files).
   Windows command:
   
     Rscript.exe LSx_v1.1.R LSx_input_file.txt
+
+2 Dependencies
+
+LSX needs the following to be present/installed in your computer:
+
+• R (make sure also that you also have the Rscript/Rscript.exe scripting frontend)
+
+• PAML (you must know where the baseml/baseml.exe and/or codeml/
+codeml.exe binaries are)
+
+• R’s ape package (v. 3.X)
+
+• R’s adephylo package
+
+• R’s parallel package, if you want to run it in parallel (parallel analysis is functional
+but under development)
