@@ -4,7 +4,7 @@ LS<sup>X</sup> is a script in R that runs the LS³ and LS⁴ algorithms of data 
 
 ## [Manual](https://github.com/carlosj-rr/LSx/wiki)
 
-### Cases in which we have used LS³ and LS⁴ to solve phylogenetic artifacts:
+## Published uses
 * Long Branch Attraction (LBA) in Metazoa and Mammalia (LS³-bash)
   * https://doi.org/10.1093/molbev/msw043
 * LBA in catfish phylogenetics (LS³ and LS⁴ with LS<sup>X</sup>)
