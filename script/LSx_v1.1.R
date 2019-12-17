@@ -714,28 +714,28 @@ masterFunction<-function() {  #Runs the entire test and organizes and outputs th
 
 
 
-#####-------------------------------------#####----------------------------------#####
+#####-------------------------------------##CODE LAUNCHER##----------------------------------#####
 
 
 
-#Launching code
-arg=commandArgs(trailingOnly=TRUE) #For handling arguments properly
+if ( !interactive() ) {
+  arg=commandArgs(trailingOnly=TRUE) #For handling arguments properly
 
-suppressPackageStartupMessages(library(adephylo))
-suppressPackageStartupMessages(library(ape))
+  suppressPackageStartupMessages(library(adephylo))
+  suppressPackageStartupMessages(library(ape))
 
-PlatformOS<-.Platform$OS.type
-if (PlatformOS == "unix" || PlatformOS == "windows") {
-  print(paste("OS detected: ",PlatformOS,sep=""),quote=FALSE)
-} else {
-  print(paste("Sorry, but I don't know how to run this analysis on a ",PlatformOS," system. Aborting",sep=""),quote=FALSE)
-  quit()
+  PlatformOS<-.Platform$OS.type
+  if (PlatformOS == "unix" || PlatformOS == "windows") {
+    print(paste("OS detected: ",PlatformOS,sep=""),quote=FALSE)
+  } else {
+    print(paste("Sorry, but I don't know how to run this analysis on a ",PlatformOS," system. Aborting",sep=""),quote=FALSE)
+    quit()
+  }
+
+  fileList<-list.files()
+  source(arg[1]) #import variables
+
+  checkInputs()
+  readInData()
+  masterFunction()
 }
-
-fileList<-list.files()
-source(arg[1]) #import variables
-
-checkInputs()
-readInData()
-masterFunction()
-
